@@ -6,6 +6,7 @@ namespace GitHistoryViewer
     {
         private Pen p;
         private Font font1;
+        private Font font2;
         public int x { set ; get; }
         private int y = 200;
         private int width = 50;
@@ -15,6 +16,7 @@ namespace GitHistoryViewer
             this.x = 10;
             this.p = new Pen(Brushes.Black, 5);
             this.font1 = new Font("Times New Roman", 24, FontStyle.Bold, GraphicsUnit.Pixel);
+            this.font2 = new Font("Times New Roman", 16, FontStyle.Bold, GraphicsUnit.Pixel);
         }
 
         public void drawCommit(Graphics g)
@@ -34,7 +36,14 @@ namespace GitHistoryViewer
         public void drawBranch(Graphics g, string BranchName)
         {
             RectangleF rectF1 = new RectangleF(x, y-70, 70, 50);
-            g.DrawString(BranchName, font1, Brushes.Black, rectF1);
+            g.DrawString(BranchName, font2, Brushes.Black, rectF1);
+            g.DrawRectangle(Pens.Black, Rectangle.Round(rectF1));
+        }
+        
+        public void drawHead(Graphics g)
+        {
+            RectangleF rectF1 = new RectangleF(x, y-150, 70, 50);
+            g.DrawString("Head", font2, Brushes.Black, rectF1);
             g.DrawRectangle(Pens.Black, Rectangle.Round(rectF1));
         }
 

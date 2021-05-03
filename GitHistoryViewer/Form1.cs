@@ -82,6 +82,8 @@ namespace GitHistoryViewer
             string localDir = @"C:\Users\a-22_\RiderProjects\GitHistoryViewer\GitHistoryViewer\git";
 
             DrawObjects drw = new DrawObjects();
+
+            bool once = false;
             
             using (var repo = new Repository(localDir))
             {
@@ -96,7 +98,16 @@ namespace GitHistoryViewer
                             MessageBox.Show(commit.Id.ToString().Substring(0, 7) + " " + repo.Branches[b.FriendlyName].Tip.Id.ToString().Substring(0, 7) );
                         */
                         }
+                        
+                        
                     }
+
+                    if (!once && repo.Head.Tip.ToString().Substring(0, 7) == commit.Id.ToString().Substring(0, 7))
+                    {
+                        drw.drawHead(g);
+                        once = true;
+                    }
+                    
                     drw.drawCommit(g);
                     drw.drawString(g,commit.Id.ToString().Substring(0, 7));
                     drw.drawLine(g);
