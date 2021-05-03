@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Eju+jUdhwJm1berfHg2+7pvWrwkCNKNULHuQj6teVIFnelWT+wh5O/O8lnhfUH9klJ1g22lIl+zjI1ZD0iWTBA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\a-22_\\RiderProjects\\GitHistoryViewer\\GitHistoryViewer\\GitHistoryViewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a-22_\\.nuget\\packages\\libgit2sharp\\0.27.0-preview-0096\\libgit2sharp.0.27.0-preview-0096.nupkg.sha512",
+    "C:\\Users\\a-22_\\.nuget\\packages\\libgit2sharp.nativebinaries\\2.0.312\\libgit2sharp.nativebinaries.2.0.312.nupkg.sha512"
+  ],
+  "logs": []
+}
